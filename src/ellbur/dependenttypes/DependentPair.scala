@@ -6,4 +6,6 @@ trait DependentPair[A <: Depender] {
   val cdr: car.T
 
   def toAnyPair: (A, Any) = (car, cdr)
+
+  override def toString = s"($car, $cdr)"
 }
